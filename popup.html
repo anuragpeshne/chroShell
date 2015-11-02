@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chrome Shell-shServer client</title>
+    <style type="text/css">
+      body {
+        font-family: "Lucida Console", Monaco, monospace;
+        font-size: 100%;
+        width: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        word-wrap: normal;
+        width: 100%;
+      }
+    </style>
+    <script type="text/javascript" src="popup.js"></script>
+  </head>
+  <body>
+    <textarea id="status"></textarea>
+    <input type="text" id="commandIp"/>
+  </body>
+</html>
