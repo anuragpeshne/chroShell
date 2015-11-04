@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Chrome Shell-shServer client</title>
+        <style>
+        #editor {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            background-color:#EEE;
+            font-style: Monaco, Menlo, monospace;
+            font-size: 10pt;
+        }
+        #error {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            padding: 8px 60px 8px 15px;
+            background-color: #DDD;
+            color: #900;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: .8em;
+            text-align: right;
+            z-index: 2;
+            opacity: .8;
+            -webkit-transition: opacity .2s linear;
+        }
+        #error.is-hidden {
+            opacity: 0;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="editor"></div>
+        <div id="error"></div>
+
+        <script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="ace/mode-powershell.js" type="text/javascript" charset="utf-8"></script>
+        <script src="ace/theme-twilight-noconflict.js" type="text/javascript" charset="utf-8"></script>
+        <script src="shell.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>
