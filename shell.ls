@@ -29,7 +29,7 @@ requestServer = (command, successFn) ->
 
     request.onerror = (e) ->
         # There was a connection error of some sort
-        console.log 'connection error' + error.target.status
+        console.log 'connection error' + e.target.status
 
     request.send JSON.stringify script: command
 
@@ -43,4 +43,4 @@ document.addEventListener 'keypress', (event) ->
             editor.session.doc.insertMergedLines \
                 row: cursor.row + 1 \
                 column: 0, \
-                [result['stdout'] + '\n']
+                [result['stdout'], '']
